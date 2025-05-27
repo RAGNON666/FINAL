@@ -1,0 +1,162 @@
+/* Estilos base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0e0e0e;
+  color: #ffffff;
+}
+
+/* Header */
+header {
+  background-color: #1b1b1b;
+  padding: 15px 0;
+  border-bottom: 2px solid #3f0071; /* tono púrpura oscuro */
+}
+
+/* Contenedor principal dentro del header */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  height: 60px;
+}
+
+/* Menú de navegación */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #8a2be2; /* púrpura vibrante */
+}
+
+
+/* Estilo general para el ítem con submenú */
+.nav-kurnix__dropdown {
+  position: relative;
+}
+
+/* Estilo del submenú oculto por defecto */
+.nav-kurnix__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #111; /* Fondo oscuro para combinar con tu sitio */
+  padding: 0.5rem 0;
+  list-style: none;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.nav-kurnix__dropdown:hover .nav-kurnix__submenu {
+  display: block;
+}
+
+/* Estilo de los enlaces dentro del submenú */
+.nav-kurnix__submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+/* Hover para enlaces del submenú */
+.nav-kurnix__submenu li a:hover {
+  background-color: #222;
+}
+
+
+
+
+
+
+/* Menú desplegable principal */
+nav ul li.dropdown {
+  position: relative;
+}
+
+nav ul li .submenu {
+  display: none;
+  position: absolute;
+  background-color: #1c1c1c;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+nav ul li.dropdown:hover .submenu {
+  display: block;
+}
+
+/* Estilo para los elementos del submenu */
+.submenu li {
+  position: relative;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background-color: #333;
+}
+
+/* Submenús internos */
+.submenu-sub {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #1c1c1c;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  min-width: 180px;
+}
+
+.dropdown-sub:hover .submenu-sub {
+  display: block;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 30px;
+  margin-top: 30px;
+}
+
+
+.producto img {
+  width: 99;      /* Que ocupe todo el ancho disponible */
+  height: 200px;        /* Ajusta la altura según lo que necesites */
+  object-fit: cover;    /* Ajusta la imagen sin deformarla */
+  border-radius: 8px;   /* Bordes redondeados opcionales */
+}
